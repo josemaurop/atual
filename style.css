@@ -1,0 +1,1182 @@
+/* style.css */
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #111;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    color: #111;
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    background: #800000;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    gap: 0.5rem;
+}
+
+.btn:hover {
+    background: #4d0000;
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #800000, #000000);
+}
+
+/* Destaque para o botão na seção Hero */
+.hero-btn-destaque {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-btn-destaque:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Estilo para palavras chave na Hero Section - Cor branca para destaque */
+.hero h1 .highlight {
+    font-weight: 700;
+    color: #FFFFFF; /* Slogan Conecte.Converta.Cresça em BRANCO */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Header */
+header {
+    background: #ffffff;
+    color: #111;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px; /* Ajusta a largura do header container */
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.logo {
+    height: 70px;
+    filter: none;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-list a {
+    color: #111;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #800000;
+    transition: width 0.3s ease-out;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+#menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #111;
+}
+
+/* Hero (aplicável a index.html) */
+/* Removido o Hero da página de serviços */
+.hero {
+    background: linear-gradient(to right, #800000, #000000);
+    color: #fff;
+    text-align: center;
+    padding: 10rem 1rem 6rem;
+    padding-top: calc(200px + 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Sections */
+section {
+    padding: 5rem 1rem;
+    text-align: center;
+}
+
+/* Ajuste de padding para a primeira seção da página (sem Hero) */
+.page-start-section {
+    padding-top: calc(90px + 5rem); /* Altura do header + padding normal de seção */
+}
+
+/* Seção de Planos (agora apenas em servicos.html) */
+.plans {
+    background: #f0f0f0;
+    padding: 10rem 1rem;
+}
+
+.plans h2 {
+    color: #111;
+    margin-bottom: 1.5rem; /* Ajuste para ter um subtítulo abaixo */
+}
+
+.plans .subtitle { /* Estilo para o subtítulo dos planos */
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 3.5rem;
+}
+
+.plan-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1300px; /* Ajusta a largura dos cards de plano */
+    margin: 0 auto;
+}
+
+.plan-cards .card {
+    background: #fff;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease; /* Adiciona border-color na transição */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+    border: 1px solid transparent;
+    cursor: pointer; /* Indica que o card é clicável */
+}
+
+.plan-cards .card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-color: #800000;
+}
+
+/* Estilo para card SELECIONADO */
+.plan-cards .card.selected {
+    transform: translateY(-8px) scale(1.02); /* Mantém o efeito de "subir" */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3); /* Sombra mais forte */
+    border-color: #13355c; /* Borda azul mais destacada */
+    background: #f5f5f5; /* Levemente cinza para indicar seleção */
+}
+
+
+/* Estilo específico para o card de destaque no desktop */
+.plan-cards .card.destaque {
+    background: linear-gradient(to bottom right, #800000, #000000);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: none;
+    grid-column: 1 / -1; /* Ocupa todas as colunas disponíveis no grid */
+    min-height: auto;
+    padding: 3rem 4rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+/* O card de destaque não deve ter o efeito de seleção azul */
+.plan-cards .card.destaque.selected {
+    background: linear-gradient(to bottom right, #800000, #000000); /* Volta ao original */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Volta ao original */
+    border: none; /* Volta ao original */
+}
+
+.plan-cards .card.destaque h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.plan-cards .card.destaque p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #eee;
+    flex-grow: 0;
+}
+
+.plan-cards .card.destaque ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.plan-cards .card.destaque ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.plan-cards .card.destaque ul li i {
+    color: #FFFFFF; /* Ícones de check neutros (brancos) dentro do card de destaque */
+    margin-right: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.plan-cards .card.destaque .price-hidden {
+    display: block; /* Garante que a mensagem de contato seja visível */
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: #fff;
+}
+
+.plan-cards .card.destaque .btn {
+    background: #fff;
+    color: #800000;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    align-self: flex-start;
+    padding: 1rem 2.5rem;
+}
+
+.plan-cards .card.destaque .btn:hover {
+    background: #eee;
+    color: #4d0000;
+    transform: translateY(-2px);
+}
+
+.plan-cards .card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.plan-cards .card p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.plan-cards .card .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0 2rem;
+    color: #800000;
+}
+
+/* O que fazemos - Repaginado (Aplicável a servicos.html) */
+.services {
+    background: #ffffff;
+    padding: 5rem 1rem;
+}
+
+.services h2 {
+    margin-bottom: 3.5rem;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1300px; /* Ajusta a largura dos cards de serviço */
+    margin: 0 auto;
+}
+
+.services .card { /* Estilo dos cards de serviço */
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+    height: auto;
+}
+
+.services .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.services .card img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
+}
+
+.services .card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.services .card p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Nova seção unificada: Benefícios e Como Funciona (Stepper) */
+.unified-section {
+    background: linear-gradient(to right, #800000, #000000);
+    color: #fff;
+    padding: 6rem 1rem;
+    text-align: center;
+}
+
+.unified-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    max-width: 1300px; /* Ajusta a largura da seção unificada */
+    margin: 0 auto;
+}
+
+.unified-section h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.unified-section .subtitle {
+    font-size: 1.3rem;
+    color: #eee;
+    margin-bottom: 4rem;
+}
+
+/* Benefícios (dentro da seção unificada) */
+.benefits-content {
+    background: rgba(255,255,255,0.1);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-bottom: 5rem;
+}
+
+.benefits-list-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 400px;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: transform 0.2s ease;
+}
+
+.benefits-list li:hover {
+    transform: translateX(5px);
+}
+
+.benefits-list li i {
+    color: #25D366; /* Cor verde para os ícones de check de sucesso */
+    margin-right: 1rem;
+    font-size: 1.4rem;
+}
+
+/* Como Funciona (Stepper) - Estilo como na imagem */
+.how-it-works-content {
+    background: rgba(255,255,255,0.1);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.how-it-works-content h2 {
+    color: #fff;
+    margin-bottom: 3.5rem;
+}
+
+.custom-stepper-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+/* Linha de conexão do stepper */
+.custom-stepper-container::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255,255,255,0.3);
+    z-index: 1;
+}
+
+.custom-stepper-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    padding: 0 0.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+}
+
+/* Atraso para cada item do stepper */
+.custom-stepper-item:nth-child(1) { animation-delay: 0.1s; }
+.custom-stepper-item:nth-child(2) { animation-delay: 0.3s; }
+.custom-stepper-item:nth-child(3) { animation-delay: 0.5s; }
+.custom-stepper-item:nth-child(4) { animation-delay: 0.7s; }
+
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #13355c; /* Cor azul para todos os círculos */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    border: 2px solid #13355c; /* Borda da mesma cor do fundo para todos */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.step-title {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.step-description {
+    color: #eee;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Nova Seção: Prova Social / Depoimentos */
+.testimonials-section {
+    background-color: #f0f0f0;
+    padding: 5rem 1rem;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    color: #111;
+    margin-bottom: 1rem;
+}
+
+.testimonials-section .subtitle {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 3.5rem;
+}
+
+.testimonials-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1300px; /* Alinhado com o container principal */
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    flex-grow: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+    border: 2px solid #ddd;
+}
+
+.author-name {
+    font-weight: 700;
+    color: #333;
+    font-size: 1rem;
+}
+
+.author-title {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Nova Seção: Chamada para Ação para Serviços (index.html) */
+.cta-services-section {
+    background: linear-gradient(to right, #13355c, #0d2a45); /* Mesmo gradiente da seção mailing */
+    color: #fff;
+    padding: 6rem 1rem; /* Padding generoso */
+    text-align: center;
+}
+
+.cta-services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.cta-services-section .subtitle {
+    font-size: 1.3rem;
+    color: #eee;
+    margin-bottom: 3rem; /* Espaçamento antes do botão */
+}
+
+.cta-services-btn {
+    padding: 1.2rem 3rem; /* Botão maior e mais chamativo */
+    font-size: 1.2rem;
+    border-radius: 50px; /* Bordas arredondadas */
+    background: #25D366; /* Cor verde do WhatsApp para destaque */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.cta-services-btn:hover {
+    background: #1DA851; /* Tom de verde mais escuro no hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+
+/* Estilos para a nova seção de Mailing em servicos.html */
+.mailing-section {
+    background: linear-gradient(to right, #13355c, #0d2a45); /* Gradiente de azul escuro para o fundo */
+    color: #fff;
+    padding: 6rem 1rem; /* Mais padding para destaque */
+    text-align: center;
+}
+
+.mailing-section h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.mailing-section .subtitle {
+    font-size: 1.3rem;
+    color: #eee;
+    margin-bottom: 3.5rem;
+}
+
+.mailing-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas para os stats */
+    gap: 2rem;
+    max-width: 900px; /* Largura para os stats */
+    margin: 0 auto 4rem auto; /* Espaçamento abaixo dos stats */
+}
+
+.stat-item {
+    background: rgba(255,255,255,0.15); /* Fundo translúcido para os stats */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.25);
+}
+
+.stat-number {
+    font-size: 3.5rem; /* Tamanho grande para o número */
+    font-weight: 700;
+    color: #FFFFFF; /* Cor branca para o número */
+    margin-bottom: 0.5rem;
+    position: relative; /* Para o sinal de mais */
+}
+
+.stat-number .plus-sign {
+    font-size: 1.8rem; /* Tamanho menor para o sinal de mais */
+    position: absolute;
+    top: 0;
+    right: 0; /* Ajustar posição se necessário */
+    color: rgba(255,255,255,0.7);
+}
+
+.stat-description {
+    font-size: 1.1rem;
+    color: #eee;
+    line-height: 1.4;
+}
+
+
+.mailing-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.mailing-text {
+    flex: 1;
+}
+
+.mailing-text p {
+    font-size: 1.1rem;
+    color: #fff; /* Cor do texto no mailing-text para o fundo escuro */
+    margin-bottom: 1rem;
+}
+
+.mailing-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.mailing-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: #fff; /* Cor do texto da lista no mailing-text */
+}
+
+.mailing-list li i {
+    color: #25D366; /* Checks verdes para sucesso */
+    margin-right: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.mailing-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mailing-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+/* FAQ */
+.faq {
+    background: #ffffff;
+    padding: 5rem 1rem;
+}
+
+.faq-item {
+    margin-bottom: 0;
+    max-width: 1300px; /* Ajusta a largura dos itens do FAQ */
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.faq-item:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.faq-item:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+.faq-question {
+    background: #fff;
+    color: #111;
+    padding: 1.2rem 1.5rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+}
+
+.faq-item:last-child .faq-question {
+    border-bottom: none;
+}
+
+.faq-question:hover {
+    background: #f5f5f5;
+    color: #800000;
+}
+
+/* Estilo para o ícone de seta do FAQ */
+.faq-question .fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.faq-question.open .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    background: #fafafa;
+    padding: 1.5rem;
+    border-top: none;
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    background: #ffffff;
+    color: #111;
+    padding: 4rem 1rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+}
+
+.footer-grid {
+    display: grid;
+    /* Colunas para o footer: logo/info, mapa, navegação (formulário removido) */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Garante que o mapa e a navegação pulem para a próxima linha se a tela for pequena, mas mantêm o alinhamento em telas maiores */
+    gap: 3rem;
+    max-width: 1300px; /* Ajusta a largura do footer grid */
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Garante que as colunas se comportem corretamente com a remoção do formulário */
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-col h3 {
+    color: #111;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+/* Estilo para a coluna de informações e logo */
+.footer-info {
+    order: 1; /* Define a ordem para aparecer primeiro no grid */
+}
+.footer-info .logo {
+    height: 80px;
+    margin-bottom: 1rem;
+}
+.footer-info p {
+    margin: 0.2rem 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+.footer-info .social-icons {
+    margin-top: 1.5rem;
+}
+.footer-info .social-icons a {
+    color: #111;
+}
+.footer-info .social-icons a:hover {
+    color: #800000;
+}
+
+
+/* Estilo para o formulário de contato no footer (REMOVIDO DO HTML) */
+
+
+/* Estilo para o mapa */
+.footer-map {
+    order: 2; /* Define a ordem para aparecer em segundo */
+}
+.map-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 250px;
+    display: block;
+}
+.address-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.8rem;
+    text-align: left;
+}
+
+/* Estilo para a coluna de navegação no footer */
+.footer-nav-col {
+    order: 3; /* Define a ordem para aparecer em terceiro */
+}
+.footer-nav-col .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer-nav-col .footer-nav a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+.footer-nav-col .footer-nav a:hover {
+    color: #800000;
+    transform: none;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background: #ffffff;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-list a {
+        color: #111;
+    }
+
+    /* Esconder o botão "Fale com a gente" no header mobile */
+    header .btn.cta {
+        display: none;
+    }
+
+    #menu-toggle {
+        display: block;
+        color: #111;
+    }
+
+    .hero {
+        padding-top: calc(90px + 2rem);
+        padding: 8rem 1rem 4rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .service-cards, .plan-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Card de destaque no mobile - Reseta para o comportamento padrão do card */
+    .plan-cards .card.destaque {
+        grid-column: auto;
+        min-height: 400px;
+        padding: 3rem 2rem;
+        text-align: center;
+        align-items: center;
+        background: linear-gradient(to bottom right, #800000, #000000);
+        color: #fff;
+    }
+
+    .plan-cards .card.destaque p {
+        flex-grow: 1;
+    }
+
+    .plan-cards .card.destaque .btn {
+        align-self: center;
+    }
+
+    .plan-cards .card.destaque .price-hidden {
+        display: none;
+    }
+
+    .plan-cards .card.destaque .price {
+        display: block;
+        color: #fff;
+    }
+
+    /* O que fazemos - mobile */
+    .services .card img {
+        max-width: 70px;
+    }
+
+    /* Nova seção unificada - mobile */
+    .unified-section .container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .unified-section h2 {
+        font-size: 2rem;
+    }
+    .unified-section .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+    }
+    .benefits-content, .how-it-works-content {
+        padding: 2rem;
+        margin-bottom: 0;
+    }
+    .benefits-list-wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .benefits-list {
+        text-align: center;
+    }
+    .benefits-list li {
+        justify-content: center;
+    }
+
+    /* Stepper no mobile */
+    .custom-stepper-container {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    /* Remover completamente a linha do stepper no mobile */
+    .custom-stepper-container::before {
+        display: none; /* */
+    }
+
+    .custom-stepper-item {
+        width: 100%;
+        margin-bottom: 2.5rem;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 1rem;
+    }
+
+    .custom-stepper-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .step-circle {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .step-title, .step-description {
+        text-align: left;
+    }
+
+    /* Testimonials section mobile */
+    .testimonials-section .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+    }
+    .testimonial-card {
+        min-height: auto;
+    }
+
+    /* Estilos para a nova seção de Mailing em servicos.html (mobile) */
+    .mailing-section {
+        padding: 3rem 1rem;
+    }
+    .mailing-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .stat-item {
+        padding: 1.2rem;
+    }
+    .stat-number {
+        font-size: 3rem;
+    }
+    .stat-description {
+        font-size: 1rem;
+    }
+
+    .mailing-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .mailing-image img {
+        max-width: 80%;
+    }
+
+
+    /* Footer no mobile */
+    footer {
+        padding: 3rem 1rem;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .footer-col, .footer-info, .footer-map, .footer-nav-col {
+        text-align: center;
+        align-items: center;
+    }
+    .footer-col h3 {
+        text-align: center;
+    }
+    .footer-info .logo {
+        height: 60px;
+    }
+    .footer-info .social-icons {
+        justify-content: center;
+    }
+    .footer-nav-col .footer-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    .map-container {
+        height: 200px;
+    }
+}
