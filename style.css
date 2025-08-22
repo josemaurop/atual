@@ -15,7 +15,9 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #111;
     margin-bottom: 0.5em;
     text-align: center;
@@ -57,20 +59,21 @@ h1, h2, h3 {
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: 50px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-btn-destaque:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Estilo para palavras chave na Hero Section - Cor branca para destaque */
 .hero h1 .highlight {
     font-weight: 700;
-    color: #FFFFFF; /* Slogan Conecte.Converta.Cresça em BRANCO */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    color: #FFFFFF;
+    /* Slogan Conecte.Converta.Cresça em BRANCO */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Header */
@@ -82,7 +85,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     height: 90px;
     display: flex;
     align-items: center;
@@ -92,7 +95,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1300px; /* Ajusta a largura do header container */
+    max-width: 1300px;
+    /* Ajusta a largura do header container */
     margin: 0 auto;
     padding: 0 1rem;
     width: 100%;
@@ -159,7 +163,7 @@ header {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: #fff;
 }
@@ -177,21 +181,24 @@ section {
 
 /* Ajuste de padding para a primeira seção da página (sem Hero) */
 .page-start-section {
-    padding-top: calc(90px + 5rem); /* Altura do header + padding normal de seção */
+    padding-top: calc(90px + 5rem);
+    /* Altura do header + padding normal de seção */
 }
 
 /* Seção de Planos (agora apenas em servicos.html) */
 .plans {
     background: #f0f0f0;
-    padding: 10rem 1rem;
+    padding: 8rem 1rem;
 }
 
 .plans h2 {
     color: #111;
-    margin-bottom: 1.5rem; /* Ajuste para ter um subtítulo abaixo */
+    margin-bottom: 1.5rem;
+    /* Ajuste para ter um subtítulo abaixo */
 }
 
-.plans .subtitle { /* Estilo para o subtítulo dos planos */
+.plans .subtitle {
+    /* Estilo para o subtítulo dos planos */
     font-size: 1.3rem;
     color: #555;
     margin-bottom: 3.5rem;
@@ -201,7 +208,8 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
-    max-width: 1300px; /* Ajusta a largura dos cards de plano */
+    max-width: 1300px;
+    /* Ajusta a largura dos cards de plano */
     margin: 0 auto;
 }
 
@@ -209,29 +217,35 @@ section {
     background: #fff;
     padding: 3rem 2rem;
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease; /* Adiciona border-color na transição */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    /* Adiciona border-color na transição */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 400px;
     border: 1px solid transparent;
-    cursor: pointer; /* Indica que o card é clicável */
+    cursor: pointer;
+    /* Indica que o card é clicável */
 }
 
 .plan-cards .card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     border-color: #800000;
 }
 
 /* Estilo para card SELECIONADO */
 .plan-cards .card.selected {
-    transform: translateY(-8px) scale(1.02); /* Mantém o efeito de "subir" */
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3); /* Sombra mais forte */
-    border-color: #13355c; /* Borda azul mais destacada */
-    background: #f5f5f5; /* Levemente cinza para indicar seleção */
+    transform: translateY(-8px) scale(1.02);
+    /* Mantém o efeito de "subir" */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    /* Sombra mais forte */
+    border-color: #13355c;
+    /* Borda azul mais destacada */
+    background: #f5f5f5;
+    /* Levemente cinza para indicar seleção */
 }
 
 
@@ -239,9 +253,10 @@ section {
 .plan-cards .card.destaque {
     background: linear-gradient(to bottom right, #800000, #000000);
     color: #fff;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border: none;
-    grid-column: 1 / -1; /* Ocupa todas as colunas disponíveis no grid */
+    grid-column: 1 / -1;
+    /* Ocupa todas as colunas disponíveis no grid */
     min-height: auto;
     padding: 3rem 4rem;
     text-align: left;
@@ -249,11 +264,15 @@ section {
     flex-direction: column;
     align-items: flex-start;
 }
+
 /* O card de destaque não deve ter o efeito de seleção azul */
 .plan-cards .card.destaque.selected {
-    background: linear-gradient(to bottom right, #800000, #000000); /* Volta ao original */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Volta ao original */
-    border: none; /* Volta ao original */
+    background: linear-gradient(to bottom right, #800000, #000000);
+    /* Volta ao original */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* Volta ao original */
+    border: none;
+    /* Volta ao original */
 }
 
 .plan-cards .card.destaque h3 {
@@ -284,13 +303,15 @@ section {
 }
 
 .plan-cards .card.destaque ul li i {
-    color: #FFFFFF; /* Ícones de check neutros (brancos) dentro do card de destaque */
+    color: #FFFFFF;
+    /* Ícones de check neutros (brancos) dentro do card de destaque */
     margin-right: 0.8rem;
     font-size: 1.3rem;
 }
 
 .plan-cards .card.destaque .price-hidden {
-    display: block; /* Garante que a mensagem de contato seja visível */
+    display: block;
+    /* Garante que a mensagem de contato seja visível */
     font-size: 1.5rem;
     font-weight: 500;
     margin-top: 1rem;
@@ -301,7 +322,7 @@ section {
     background: #fff;
     color: #800000;
     font-weight: bold;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     align-self: flex-start;
     padding: 1rem 2.5rem;
 }
@@ -347,15 +368,17 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    max-width: 1300px; /* Ajusta a largura dos cards de serviço */
+    max-width: 1300px;
+    /* Ajusta a largura dos cards de serviço */
     margin: 0 auto;
 }
 
-.services .card { /* Estilo dos cards de serviço */
+.services .card {
+    /* Estilo dos cards de serviço */
     background: #fff;
     padding: 2.5rem;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #eee;
@@ -364,14 +387,14 @@ section {
 
 .services .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .services .card img {
     max-width: 80px;
     height: auto;
     margin-bottom: 1.5rem;
-    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1));
 }
 
 .services .card h3 {
@@ -389,7 +412,7 @@ section {
 .unified-section {
     background: linear-gradient(to right, #800000, #000000);
     color: #fff;
-    padding: 6rem 1rem;
+    padding: 5rem 1rem;
     text-align: center;
 }
 
@@ -397,7 +420,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    max-width: 1300px; /* Ajusta a largura da seção unificada */
+    max-width: 1300px;
+    /* Ajusta a largura da seção unificada */
     margin: 0 auto;
 }
 
@@ -415,10 +439,10 @@ section {
 
 /* Benefícios (dentro da seção unificada) */
 .benefits-content {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     padding: 3rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     margin-bottom: 5rem;
 }
 
@@ -450,17 +474,18 @@ section {
 }
 
 .benefits-list li i {
-    color: #25D366; /* Cor verde para os ícones de check de sucesso */
+    color: #25D366;
+    /* Cor verde para os ícones de check de sucesso */
     margin-right: 1rem;
     font-size: 1.4rem;
 }
 
 /* Como Funciona (Stepper) - Estilo como na imagem */
 .how-it-works-content {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     padding: 3rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .how-it-works-content h2 {
@@ -486,7 +511,7 @@ section {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     z-index: 1;
 }
 
@@ -505,10 +530,21 @@ section {
 }
 
 /* Atraso para cada item do stepper */
-.custom-stepper-item:nth-child(1) { animation-delay: 0.1s; }
-.custom-stepper-item:nth-child(2) { animation-delay: 0.3s; }
-.custom-stepper-item:nth-child(3) { animation-delay: 0.5s; }
-.custom-stepper-item:nth-child(4) { animation-delay: 0.7s; }
+.custom-stepper-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.custom-stepper-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.custom-stepper-item:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.custom-stepper-item:nth-child(4) {
+    animation-delay: 0.7s;
+}
 
 @keyframes fadeInSlideUp {
     to {
@@ -521,7 +557,8 @@ section {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #13355c; /* Cor azul para todos os círculos */
+    background-color: #13355c;
+    /* Cor azul para todos os círculos */
     color: #fff;
     display: flex;
     justify-content: center;
@@ -529,7 +566,8 @@ section {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    border: 2px solid #13355c; /* Borda da mesma cor do fundo para todos */
+    border: 2px solid #13355c;
+    /* Borda da mesma cor do fundo para todos */
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -568,7 +606,8 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    max-width: 1300px; /* Alinhado com o container principal */
+    max-width: 1300px;
+    /* Alinhado com o container principal */
     margin: 0 auto;
 }
 
@@ -576,7 +615,7 @@ section {
     background: #fff;
     padding: 2.5rem;
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -587,7 +626,7 @@ section {
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .testimonial-text {
@@ -627,9 +666,11 @@ section {
 
 /* Nova Seção: Chamada para Ação para Serviços (index.html) */
 .cta-services-section {
-    background: linear-gradient(to right, #13355c, #0d2a45); /* Mesmo gradiente da seção mailing */
+    background: linear-gradient(to right, #13355c, #0d2a45);
+    /* Mesmo gradiente da seção mailing */
     color: #fff;
-    padding: 6rem 1rem; /* Padding generoso */
+    padding: 6rem 1rem;
+    /* Padding generoso */
     text-align: center;
 }
 
@@ -642,29 +683,36 @@ section {
 .cta-services-section .subtitle {
     font-size: 1.3rem;
     color: #eee;
-    margin-bottom: 3rem; /* Espaçamento antes do botão */
+    margin-bottom: 3rem;
+    /* Espaçamento antes do botão */
 }
 
 .cta-services-btn {
-    padding: 1.2rem 3rem; /* Botão maior e mais chamativo */
+    padding: 1.2rem 3rem;
+    /* Botão maior e mais chamativo */
     font-size: 1.2rem;
-    border-radius: 50px; /* Bordas arredondadas */
-    background: #25D366; /* Cor verde do WhatsApp para destaque */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 50px;
+    /* Bordas arredondadas */
+    background: #25D366;
+    /* Cor verde do WhatsApp para destaque */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .cta-services-btn:hover {
-    background: #1DA851; /* Tom de verde mais escuro no hover */
+    background: #1DA851;
+    /* Tom de verde mais escuro no hover */
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 
 /* Estilos para a nova seção de Mailing em servicos.html */
 .mailing-section {
-    background: linear-gradient(to right, #13355c, #0d2a45); /* Gradiente de azul escuro para o fundo */
+    background: linear-gradient(to right, #13355c, #0d2a45);
+    /* Gradiente de azul escuro para o fundo */
     color: #fff;
-    padding: 6rem 1rem; /* Mais padding para destaque */
+    padding: 6rem 1rem;
+    /* Mais padding para destaque */
     text-align: center;
 }
 
@@ -681,39 +729,48 @@ section {
 
 .mailing-stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas para os stats */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Colunas para os stats */
     gap: 2rem;
-    max-width: 900px; /* Largura para os stats */
-    margin: 0 auto 4rem auto; /* Espaçamento abaixo dos stats */
+    max-width: 900px;
+    /* Largura para os stats */
+    margin: 0 auto 4rem auto;
+    /* Espaçamento abaixo dos stats */
 }
 
 .stat-item {
-    background: rgba(255,255,255,0.15); /* Fundo translúcido para os stats */
+    background: rgba(255, 255, 255, 0.15);
+    /* Fundo translúcido para os stats */
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .stat-item:hover {
     transform: translateY(-5px);
-    background: rgba(255,255,255,0.25);
+    background: rgba(255, 255, 255, 0.25);
 }
 
 .stat-number {
-    font-size: 3.5rem; /* Tamanho grande para o número */
+    font-size: 3.5rem;
+    /* Tamanho grande para o número */
     font-weight: 700;
-    color: #FFFFFF; /* Cor branca para o número */
+    color: #FFFFFF;
+    /* Cor branca para o número */
     margin-bottom: 0.5rem;
-    position: relative; /* Para o sinal de mais */
+    position: relative;
+    /* Para o sinal de mais */
 }
 
 .stat-number .plus-sign {
-    font-size: 1.8rem; /* Tamanho menor para o sinal de mais */
+    font-size: 1.8rem;
+    /* Tamanho menor para o sinal de mais */
     position: absolute;
     top: 0;
-    right: 0; /* Ajustar posição se necessário */
-    color: rgba(255,255,255,0.7);
+    right: 0;
+    /* Ajustar posição se necessário */
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .stat-description {
@@ -739,7 +796,8 @@ section {
 
 .mailing-text p {
     font-size: 1.1rem;
-    color: #fff; /* Cor do texto no mailing-text para o fundo escuro */
+    color: #fff;
+    /* Cor do texto no mailing-text para o fundo escuro */
     margin-bottom: 1rem;
 }
 
@@ -754,11 +812,13 @@ section {
     align-items: center;
     margin-bottom: 0.8rem;
     font-size: 1rem;
-    color: #fff; /* Cor do texto da lista no mailing-text */
+    color: #fff;
+    /* Cor do texto da lista no mailing-text */
 }
 
 .mailing-list li i {
-    color: #25D366; /* Checks verdes para sucesso */
+    color: #25D366;
+    /* Checks verdes para sucesso */
     margin-right: 0.8rem;
     font-size: 1.2rem;
 }
@@ -774,7 +834,7 @@ section {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -786,7 +846,8 @@ section {
 
 .faq-item {
     margin-bottom: 0;
-    max-width: 1300px; /* Ajusta a largura dos itens do FAQ */
+    max-width: 1300px;
+    /* Ajusta a largura dos itens do FAQ */
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #ddd;
@@ -857,7 +918,7 @@ footer {
     padding: 4rem 1rem;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .footer-grid {
@@ -866,7 +927,8 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     /* Garante que o mapa e a navegação pulem para a próxima linha se a tela for pequena, mas mantêm o alinhamento em telas maiores */
     gap: 3rem;
-    max-width: 1300px; /* Ajusta a largura do footer grid */
+    max-width: 1300px;
+    /* Ajusta a largura do footer grid */
     margin: 0 auto;
     text-align: left;
 }
@@ -887,23 +949,29 @@ footer {
 
 /* Estilo para a coluna de informações e logo */
 .footer-info {
-    order: 1; /* Define a ordem para aparecer primeiro no grid */
+    order: 1;
+    /* Define a ordem para aparecer primeiro no grid */
 }
+
 .footer-info .logo {
     height: 80px;
     margin-bottom: 1rem;
 }
+
 .footer-info p {
     margin: 0.2rem 0;
     color: #555;
     font-size: 0.95rem;
 }
+
 .footer-info .social-icons {
     margin-top: 1.5rem;
 }
+
 .footer-info .social-icons a {
     color: #111;
 }
+
 .footer-info .social-icons a:hover {
     color: #800000;
 }
@@ -914,13 +982,15 @@ footer {
 
 /* Estilo para o mapa */
 .footer-map {
-    order: 2; /* Define a ordem para aparecer em segundo */
+    order: 2;
+    /* Define a ordem para aparecer em segundo */
 }
+
 .map-container {
     width: 100%;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .map-container iframe {
@@ -928,6 +998,7 @@ footer {
     height: 250px;
     display: block;
 }
+
 .address-text {
     font-size: 0.9rem;
     color: #666;
@@ -937,8 +1008,10 @@ footer {
 
 /* Estilo para a coluna de navegação no footer */
 .footer-nav-col {
-    order: 3; /* Define a ordem para aparecer em terceiro */
+    order: 3;
+    /* Define a ordem para aparecer em terceiro */
 }
+
 .footer-nav-col .footer-nav {
     display: flex;
     flex-direction: column;
@@ -952,6 +1025,7 @@ footer {
     font-weight: 400;
     font-size: 0.95rem;
 }
+
 .footer-nav-col .footer-nav a:hover {
     color: #800000;
     transform: none;
@@ -970,7 +1044,7 @@ footer {
         width: 100%;
         text-align: center;
         padding: 1rem 0;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
     }
@@ -1014,7 +1088,8 @@ footer {
         padding: 3rem 1rem;
     }
 
-    .service-cards, .plan-cards {
+    .service-cards,
+    .plan-cards {
         grid-template-columns: 1fr;
     }
 
@@ -1056,24 +1131,31 @@ footer {
         flex-direction: column;
         gap: 3rem;
     }
+
     .unified-section h2 {
         font-size: 2rem;
     }
+
     .unified-section .subtitle {
         font-size: 1.1rem;
         margin-bottom: 2.5rem;
     }
-    .benefits-content, .how-it-works-content {
+
+    .benefits-content,
+    .how-it-works-content {
         padding: 2rem;
         margin-bottom: 0;
     }
+
     .benefits-list-wrapper {
         flex-direction: column;
         gap: 1.5rem;
     }
+
     .benefits-list {
         text-align: center;
     }
+
     .benefits-list li {
         justify-content: center;
     }
@@ -1087,7 +1169,8 @@ footer {
 
     /* Remover completamente a linha do stepper no mobile */
     .custom-stepper-container::before {
-        display: none; /* */
+        display: none;
+        /* */
     }
 
     .custom-stepper-item {
@@ -1108,7 +1191,8 @@ footer {
         flex-shrink: 0;
     }
 
-    .step-title, .step-description {
+    .step-title,
+    .step-description {
         text-align: left;
     }
 
@@ -1117,6 +1201,7 @@ footer {
         font-size: 1.1rem;
         margin-bottom: 2.5rem;
     }
+
     .testimonial-card {
         min-height: auto;
     }
@@ -1125,17 +1210,21 @@ footer {
     .mailing-section {
         padding: 3rem 1rem;
     }
+
     .mailing-stats-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         margin-bottom: 2.5rem;
     }
+
     .stat-item {
         padding: 1.2rem;
     }
+
     .stat-number {
         font-size: 3rem;
     }
+
     .stat-description {
         font-size: 1rem;
     }
@@ -1144,6 +1233,7 @@ footer {
         flex-direction: column;
         gap: 2rem;
     }
+
     .mailing-image img {
         max-width: 80%;
     }
@@ -1153,30 +1243,195 @@ footer {
     footer {
         padding: 3rem 1rem;
     }
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
-    .footer-col, .footer-info, .footer-map, .footer-nav-col {
+
+    .footer-col,
+    .footer-info,
+    .footer-map,
+    .footer-nav-col {
         text-align: center;
         align-items: center;
     }
+
     .footer-col h3 {
         text-align: center;
     }
+
     .footer-info .logo {
         height: 60px;
     }
+
     .footer-info .social-icons {
         justify-content: center;
     }
+
     .footer-nav-col .footer-nav {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         gap: 0.8rem;
     }
+
     .map-container {
         height: 200px;
     }
+}
+
+/* Adicione este código ao final do seu arquivo style.css */
+
+.plan-cards .card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #800000;
+}
+
+.plan-cards .plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    text-align: left;
+    align-self: center;
+    /* Centraliza a lista no card */
+    min-width: 200px;
+    /* Largura mínima para alinhamento */
+    flex-grow: 1;
+}
+
+.plan-cards .plan-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: #333;
+    gap: 3px;
+}
+
+.plan-cards .plan-features li i {
+    color: #25D366;
+    /* Verde para ícones de benefício */
+    margin-right: 0.8rem;
+    font-size: 1.2rem;
+    width: 20px;
+    /* Largura fixa para alinhamento */
+    text-align: center;
+}
+
+/* ESTILOS PARA O CARD POPULAR */
+
+.plan-cards .card.popular {
+    position: relative;
+    /* Necessário para o selo */
+    overflow: hidden;
+    /* Garante que o selo não vaze */
+    border: 2px solid #13355c;
+    transform: scale(1.03);
+    /* Aumenta o card para dar destaque */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito de hover aprimorado para o card popular */
+.plan-cards .card.popular:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+/* Selo "MAIS POPULAR" */
+.plan-cards .card.popular::before {
+    content: 'MAIS POPULAR';
+    position: absolute;
+    top: 25px;
+    right: -40px;
+    background: #13355c;
+    color: #fff;
+    padding: 6px 35px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+
+/* REORDENAÇÃO DOS CARDS PARA DESKTOP */
+
+/* Aplica-se apenas a telas com 992px de largura ou mais */
+@media (min-width: 992px) {
+    /* A ordem no HTML é: Avançado (1), Essencial (2), Crescimento (3) */
+
+    .plan-cards .card:nth-child(1) {
+        order: 2;
+    }
+
+    /* Manda o "Avançado" para a 3ª posição */
+    .plan-cards .card:nth-child(2) {
+        order: 1;
+    }
+
+    /* Manda o "Essencial" para a 1ª posição */
+    .plan-cards .card:nth-child(3) {
+        order: 3;
+    }
+
+    /* Manda o "Crescimento" para a 2ª posição */
+
+    /* Garante que o card de destaque (personalizado) sempre seja o último */
+    .plan-cards .card.destaque {
+        order: 4;
+    }
+}
+
+/* ESTILOS PARA AGRUPAR OS BOTÕES NOS CARDS */
+
+.card-buttons {
+    display: flex;
+    flex-direction: column;
+    /* Botões um abaixo do outro */
+    gap: 0.75rem;
+    /* Espaçamento entre os botões */
+    width: 100%;
+    /* Ocupa toda a largura do card */
+    align-items: center;
+    /* Centraliza os botões */
+    margin-top: auto;
+    /* Empurra os botões para o final do card */
+}
+
+/*
+==============================================
+  CSS GHOST BUTTON ESPECÍFICO
+==============================================
+*/
+
+.btn-ghost {
+    --cor-principal: #800000;
+
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--cor-principal);
+    background-color: transparent;
+    color: var(--cor-principal);
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: all 0.4s ease-in-out;
+}
+
+/* --- Efeito ao Passar o Mouse (Hover) --- */
+.btn-ghost:hover {
+    background-color: var(--cor-principal);
+    /* Preenche o fundo com a cor principal */
+    color: #ffffff;
+    /* Muda a cor do texto para branco */
+    transform: translateY(-3px);
+    /* Eleva o botão levemente */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    /* Adiciona uma sombra para dar profundidade */
 }
